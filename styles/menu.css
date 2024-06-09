@@ -1,0 +1,149 @@
+body{
+    background-color: black;
+    image-rendering: pixelated;
+    text-rendering: optimizeLegibility;
+}
+
+.tittle-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    height: 30svh;
+    width: 100%;
+}
+
+.tittle {
+    display: block;
+    width: 450px;
+    position: relative;
+    animation: floating 3s ease-in-out infinite;
+}
+
+.portal-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    width: 100%;
+    padding: 5rem;
+}
+
+.portal {
+    display: block;
+    width: 25vh;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(5px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+/* main menu */
+
+.menu-opt{
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    place-items: center;
+    
+    gap: 24px;
+
+    list-style: none;
+}
+
+.opt{
+    font-family: var(--alagard);
+    font-size: 25pt;
+
+    position: relative;
+    padding-left: 30px;
+
+    color: white;
+    cursor: pointer;
+}
+
+.opt::before{
+    content: '';
+    opacity: 0;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    transition: .15s all ease-in-out;
+    background: url('../images/pointer.png') no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+.opt:hover::before{
+    opacity: 1;
+}
+
+.copy{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 14pt;
+    padding: 0 1rem;
+    color: white;
+    font-family: var(--alagard);
+}
+
+/* saves-menu */
+
+.save-loader {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    width: 80svh;
+    z-index: 1000;
+    transition: .3s all ease-in-out;
+}
+
+.close-save-loader{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+}
+
+.close-save-loader{
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.close-save-loader>span{
+    color: white;
+    font-size: 18pt;
+    font-family: var(--alagard);
+}
+
+.save-loader-content{
+    color: white;
+}
+
+.save-loader.show {
+    opacity: 1;
+    pointer-events: all;
+}

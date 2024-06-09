@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="shortcut icon" href="../images/TittleSymbol.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="save-loader">
+        <button class="close-save-loader">
+            <span>x</span>
+        </button>
+        <div class="save-loader-content">
+            <h1>choose save</h1>
+            <div class="save-slot">
+                <span class="save-state">empty</span>
+            </div>
+            <div class="save-button-container">
+                <button class="save-button select-save-button">
+                    <span>select save</span>
+                </button>
+                <button class="save-button delete-save-button">
+                    <span>delete save</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="tittle-container">
+        <img src="../images/Tittle.png" alt="tittle" class="tittle">
+        <img src="../images/TittleSymbol.png" alt="TittleSymbol" class="tittleSymbol">
+    </div>
+    <div class="portal-container">
+        <img src="../images/Portal.png" alt="portal" class="portal">
+    </div>
+    <ul class="menu-opt">
+        <li class="opt play">Play<span class="pointer"></span></li>
+        <li class="opt options">Options<span class="pointer"></span></li>
+        <li class="opt quit">Quit<span class="pointer"></span></li>
+    </ul>
+    <audio id="menu-music" src="../sounds/mainMenuV1.mp3" preload="auto" autoplay loop></audio>
+    <audio id="selection-sound" src="../sounds/Selection.mp3" preload="auto"></audio>
+    <script src="../scripts/mainMenu.js"></script>
+    <h1 class="copy">
+        a game by CarlosEduardo & Akifer
+    </h1>
+</body>
+
+</html>
